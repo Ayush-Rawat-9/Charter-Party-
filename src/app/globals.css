@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 17% 95%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 232 50% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 174 63% 39%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 232 50% 36%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 5.9% 10%;
+    --sidebar-primary: 232 50% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 17% 95%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 5.9% 90%;
+    --sidebar-ring: 232 50% 36%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 232 50% 66%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 174 63% 49%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 232 50% 66%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 3.7% 15.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 232 50% 66%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 232 50% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+
+  /* Contract Preview Styles */
+  .contract-paper {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contract-content {
+    /* Legal document typography */
+    font-family: 'Times New Roman', 'Georgia', serif;
+    color: #1f2937;
+    line-height: 1.6;
+  }
+
+  .contract-content h1,
+  .contract-content h2,
+  .contract-content h3,
+  .contract-content h4,
+  .contract-content h5,
+  .contract-content h6 {
+    font-family: 'Times New Roman', 'Georgia', serif;
+    font-weight: 700;
+    color: #1f2937;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
+
+  .contract-content h1 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5em;
+  }
+
+  .contract-content h2 {
+    font-size: 1.25em;
+    color: #374151;
+  }
+
+  .contract-content h3 {
+    font-size: 1.125em;
+    color: #4b5563;
+  }
+
+  .contract-content p {
+    margin-bottom: 1em;
+    text-align: justify;
+  }
+
+  .contract-content ul,
+  .contract-content ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+  }
+
+  .contract-content li {
+    margin-bottom: 0.5em;
+  }
+
+  .contract-content strong {
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .contract-content em {
+    font-style: italic;
+    color: #4b5563;
+  }
+
+  /* Clause numbering styles */
+  .contract-content .clause {
+    margin-bottom: 1.5em;
+    padding-left: 1em;
+    border-left: 3px solid #e5e7eb;
+  }
+
+  .contract-content .clause-number {
+    font-weight: 700;
+    color: #374151;
+    margin-right: 0.5em;
+  }
+
+  /* Table styles for contract data */
+  .contract-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+  }
+
+  .contract-content th,
+  .contract-content td {
+    border: 1px solid #d1d5db;
+    padding: 0.75em;
+    text-align: left;
+  }
+
+  .contract-content th {
+    background-color: #f9fafb;
+    font-weight: 700;
+    color: #374151;
+  }
+
+  /* Signature section styling */
+  .contract-content .signature-section {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .contract-content .signature-line {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    min-width: 200px;
+    margin: 0 0.5em;
+  }
+
+  /* Print-friendly styles */
+  @media print {
+    .contract-paper {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    .contract-content {
+      font-size: 12pt;
+      line-height: 1.4;
+    }
+  }
+
+  /* Editable content styles */
+  .contract-body[contenteditable="true"]:focus {
+    background-color: rgba(59, 130, 246, 0.02);
+    border-radius: 4px;
+  }
+
+  .contract-body[contenteditable="true"]:hover {
+    background-color: rgba(59, 130, 246, 0.01);
+    border-radius: 4px;
+  }
+
+  .contract-body[contenteditable="true"] {
+    cursor: text;
+    transition: background-color 0.2s ease;
+  }
+
+  .contract-body[contenteditable="true"] * {
+    cursor: text;
+  }
+
+  .contract-body[contenteditable="true"] h1,
+  .contract-body[contenteditable="true"] h2,
+  .contract-body[contenteditable="true"] h3,
+  .contract-body[contenteditable="true"] h4,
+  .contract-body[contenteditable="true"] h5,
+  .contract-body[contenteditable="true"] h6 {
+    cursor: text;
+  }
+
+
+}
