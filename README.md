@@ -26,7 +26,7 @@ A sophisticated AI-powered web application for generating, analyzing, and managi
 - **Responsive Design**: Mobile-friendly interface
 
 ### Export & Sharing
-- **Multiple Export Formats**: Clean and redlined DOCX versions
+- **PDF Export**: High-quality PDF generation with proper formatting
 - **Email Integration**: One-click contract sharing via email
 - **File Upload Support**: DOCX, TXT, and HTML file processing
 
@@ -37,7 +37,7 @@ A sophisticated AI-powered web application for generating, analyzing, and managi
 - **UI Components**: Tailwind CSS + Radix UI
 - **Charts**: Recharts for data visualization
 - **Animations**: Framer Motion
-- **File Processing**: Mammoth.js for DOCX handling
+- **File Processing**: Mammoth.js for DOCX handling, Puppeteer for PDF generation
 - **Form Handling**: React Hook Form with Zod validation
 - **Real-time Communication**: Pusher for collaboration features
 - **External APIs**: Integration with maritime vessel databases
@@ -60,7 +60,8 @@ src/
 │   ├── merge-charter-party-contract.ts  # Contract merging
 │   ├── recommend-clauses.ts     # Clause recommendations
 │   ├── redline-generator.ts     # Redline generation
-│   └── convert-to-docx.ts       # DOCX conversion
+│   ├── convert-to-docx.ts       # DOCX conversion
+│   └── convert-to-pdf.ts        # PDF conversion
 ├── components/app/              # Main application components
 │   ├── AIRecommendations.tsx    # AI clause suggestions
 │   ├── AnimatedWrapper.tsx      # Animation components
@@ -139,7 +140,7 @@ src/
 ### Demo Features
 - **Interactive Elements**: Real-time clause acceptance/rejection
 - **Visual Analytics**: Charts and progress indicators
-- **Export Capabilities**: Multiple format support
+- **Export Capabilities**: PDF format support
 - **Professional UI**: Enterprise-grade design system
 
 ## 🔮 Future Enhancements
